@@ -34,7 +34,7 @@ class Post(models.Model):
 
 
      def __str__(self):
-          return '{}'.format(self.title)
+          return self.title
 
 class Tag(models.Model):
      title = models.CharField(max_length=50)
@@ -46,4 +46,4 @@ class Tag(models.Model):
 
 
      def __str__(self):
-          return  '{}'.format(self.title)
+          return  self.title
