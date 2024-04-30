@@ -6,7 +6,7 @@ Tag Update  "{{tag.title|title}}" - {{block.super}}
 
 
 {%block content %}
-<form action="{% url 'tag_update_url' slug=tag.slug  %}" method="post">
+<form action="{{get_update_url}}" method="post">
   {% csrf_token %}
 
 

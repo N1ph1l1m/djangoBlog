@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404
 from django.shortcuts import redirect
 from .models import Post , Tag
 from django.views.generic import View
-from .utils import ObjectDetailMixin
+from .utils import ObjectDetailMixin,ObjectUpdateMixin
 from .forms import TagForm
 from .forms import PostForm
 
@@ -35,6 +35,15 @@ class Tag_detail(ObjectDetailMixin,View):
     #         tag = get_object_or_404(Tag, slug__iexact=slug)
     #         return render (request, 'blog/tag_detail.html', context = {'tag':tag} )
 
+
+
+class PostUpdate(ObjectUpdateMixin,View):
+        model  = Post
+        model_form = PostForm
+        template = 'blog/post_update_url'
+
+
+
 class TagCreate(View):
     def get(self,request):
         form = TagForm()
@@ -61,10 +70,21 @@ class PostCreate(View):
             return redirect(new_post)
         return render(request, "blog/post_create.html", context = {'form':bound_form})
 
-class TagUpdate(View):
-    def get(self,request,slug):
-        tag = Tag.objects.get(slug__iexact=slug)
-        bound_form = TagForm(instance=tag)
-        return render (request,'blog/tag_update_form.html', context = {'form':bound_form, 'tag':tag})
+class TagUpdate(ObjectUpdateMixin,View):
+    model  = Tag
+    model_form = TagForm
+    template = 'blog/tag_update_form'
+    # def get(self,request,slug):
+    #     tag = Tag.objects.get(slug__iexact=slug)
+    #     bound_form = TagForm(instance=tag)
+    #     return render (request,'blog/tag_update_form.html', context = {'form':bound_form, 'tag':tag})
+
+    # def post(self,request,slug):
+    #     tag = Tag.objects.get(slug__iexact=slug)
+    #     bound_form = TagForm( request.POST , instance=tag)
+    #     if bound_form.is_valid():
+    #         new_tag = bound_form.save()
+    #         return redirect(new_tag)
+    #     return render(request, 'blog/tag_update_form' , context = {'form':bound_form , 'tag': tag})
 
 # Create your views here.
