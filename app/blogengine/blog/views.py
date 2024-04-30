@@ -61,4 +61,10 @@ class PostCreate(View):
             return redirect(new_post)
         return render(request, "blog/post_create.html", context = {'form':bound_form})
 
+class TagUpdate(View):
+    def get(self,request,slug):
+        tag = Tag.objects.get(slug__iexact=slug)
+        bound_form = TagForm(instance=tag)
+        return render (request,'blog/tag_update_form.html', context = {'form':bound_form, 'tag':tag})
+
 # Create your views here.
