@@ -1,19 +1,14 @@
-{%extends 'blog/base_blog.html'%} 
+{% extends 'blog/base_blog.html'%}
 
-{% block title %} 
+{% block title %}
 Tag Create - {{block.super}}
-{% endblock %} 
+{% endblock %}
 
 
 {%block content %}
 <form action="{% url 'tag_create_url' %}" method="post">
-  {% csrf_token %} 
-  
-  {% comment %} <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-    <span class="input-group-text">@</span>
-    <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-  </div> {% endcomment %}
+  {% csrf_token %}
+
 
   {%for field in form %}
   <div class="input-group mb-3">
@@ -21,12 +16,12 @@ Tag Create - {{block.super}}
         <div class = 'alert alert-danger'>
             {{field.errors}}
         </div>
-        
+
         {%endif%}
-    
+
     {{field.label}}
     {{field}}
-    
+
   </div>
   {%endfor%}
   <button type="submit" class="btn btn-primary">Create tag</button>
