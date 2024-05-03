@@ -2,12 +2,12 @@
 
 {%block title%}
 
-    Create post  "{{post.title}}"- {{block.super}}
+    Update  post  "{{post.title}}"- {{block.super}}
 
 {%endblock%}
 
 {%block content %}
-<form action = "{{% post.get_update_url  %}}" method="post"}>
+<form action = "{{post.get_update_url}}" method="post"}>
 
     {% csrf_token %}
 

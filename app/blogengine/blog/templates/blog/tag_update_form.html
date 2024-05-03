@@ -11,13 +11,14 @@ Tag Update  "{{tag.title|title}}" - {{block.super}}
 
 
   {%for field in form %}
-  <div class="input-group mb-3">
-    {%if field.errors%}
-        <div class = 'alert alert-danger'>
-            {{field.errors}}
-        </div>
+  {%if field.errors%}
+  <div class = 'alert alert-danger'>
+      {{field.errors}}
+  </div>
 
-        {%endif%}
+  {%endif%}
+  <div class="input-group mb-3">
+
 
     {{field.label}}
     {{field}}

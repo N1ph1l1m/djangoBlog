@@ -3,8 +3,9 @@ from django.shortcuts import reverse
 from django.utils.text import slugify
 from time import time
 
+
 def gen_slug(s):
-     new_slug = slugify(s,allow_unicode=True)
+     new_slug = slugify(s, allow_unicode=True)
      return new_slug + '-' + str(int(time()))
 
 
@@ -45,7 +46,8 @@ class Post(models.Model):
           super().save(*args, **kwargs)
 
      def get_update_url(self):
-          return reverse ('tag_update_url', kwargs={'slug':self.slug})
+          return reverse ('post_update_url', kwargs={'slug':self.slug})
+
 
      def __str__(self):
           return self.title
@@ -61,7 +63,7 @@ class Tag(models.Model):
                super().save(*args, **kwargs)
 
      def get_absolute_url(self):
-          return reverse("tag_detail_url", kwargs = {'slug':self.slug})
+          return reverse('tag_detail_url', kwargs = {'slug':self.slug})
 
      def get_update_url(self):
           return reverse ('tag_update_url', kwargs={'slug':self.slug})
