@@ -16,18 +16,18 @@ class Worker(models.Model):
      name = models.CharField(max_length=150,blank=False)
      second_name = models.CharField(max_length=150,blank=False)
      salary = models.IntegerField(default=0)
+     cat_id= models.ForeignKey('Category', on_delete = models.PROTECT, null = True)
+
+     def __str__(self):
+          return self.name
 
 
+class Category(models.Model):
+     name = models.CharField(max_length=100, db_index=True)
 
-class Color_test(models.Model):
-     name = models.CharField(max_length=150,blank=False)
-     color_typy = models.IntegerField(default=100)
+     def __str__(self):
+          return self.name
 
-
-class Color_test2(models.Model):
-     name = models.CharField(max_length=150,blank=False)
-     color_typy = models.IntegerField(default=100)
-     color_typys = models.IntegerField(default=100)
 
 class Post(models.Model):
      title = models.CharField(max_length = 150, db_index = True)
