@@ -21,18 +21,22 @@ def tags_list(request):
     return render(request, 'blog/tags_list.html', context = {'tags':tags})
 
 
-class PostCreate(LoginRequiredMixin,View):
-    def get(self,request):
-        form = PostForm()
-        return render(request, "blog/post_create.html", context = {'form':form})
+class PostCreate(LoginRequiredMixin,ObjectCreateMixin,View):
+    model_form = PostForm
+    template = 'blog/post_create.html'
 
-    def post(self,request):
-        bound_form = PostForm(request.POST)
+    # def get(self,request):
+    #     form = PostForm()
+    #     return render(request, "blog/post_create.html", context = {'form':form})
 
-        if bound_form.is_valid():
-            new_post = bound_form.save()
-            return redirect(new_post)
-        return render(request, "blog/post_create.html", context = {'form':bound_form})
+    # def post(self,request):
+    #     bound_form = PostForm(request.POST)
+
+    #     if bound_form.is_valid():
+    #         new_post = bound_form.save()
+    #         return redirect(new_post)
+    #     return render(request, "blog/post_create.html", context = {'form':bound_form})
+
     raise_exception = True
 
 
@@ -62,20 +66,22 @@ class PostDelete(LoginRequiredMixin,ObjectDeleteMixin,View):
 
 
 
+class TagCreate(LoginRequiredMixin ,ObjectCreateMixin,View):
+    model_form = TagForm
+    template = "blog/tag_create.html"
 
+    # def get(self,request):
+    #     form = TagForm()
+    #     return render(request, 'blog/tag_create.html', context= {'form':form})
 
-class TagCreate(LoginRequiredMixin ,View):
-    def get(self,request):
-        form = TagForm()
-        return render(request, 'blog/tag_create.html', context= {'form':form})
+    # def post(self,request):
+    #     bound_form = TagForm(request.POST)
 
-    def post(self,request):
-        bound_form = TagForm(request.POST)
+    #     if bound_form.is_valid():
+    #         new_tag = bound_form.save()
+    #         return redirect(new_tag)
+    #     return render(request, 'blog/tag_create.html', context={'form':bound_form})
 
-        if bound_form.is_valid():
-            new_tag = bound_form.save()
-            return redirect(new_tag)
-        return render(request, 'blog/tag_create.html', context={'form':bound_form})
     raise_exception = True
 
 
