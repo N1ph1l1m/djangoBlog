@@ -43,6 +43,9 @@ class PostForm(forms.ModelForm):
             'slug':forms.TextInput(attrs={'class':'form-control'}),
             'bodu':forms.Textarea(attrs={'class':'form-control'}),
             'tags':forms.SelectMultiple(attrs={'class':'form-control'}),
+
+
+
         }
 
     def clean_slug(self):
