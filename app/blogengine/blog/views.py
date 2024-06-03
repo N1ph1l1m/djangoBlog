@@ -8,11 +8,17 @@ from .utils import *
 from .forms import TagForm
 from .forms import PostForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.paginator import Paginator
 
 def posts_list(request):
-    posts = Post.objects.all
-    n = ['Oleg' , 'Masha' , 'Kit' ]
-    return render(request, 'blog/index.html',context ={'posts' : posts})
+    posts = Post.objects.all()
+
+    paginator = Paginator(posts,2)
+    page_number = request.GET.get('page',1)
+    page = paginator.get_page(page_number)
+
+    return render(request, 'blog/index.html',context ={'page_object' : page})
+
 
 
 
@@ -24,6 +30,9 @@ def tags_list(request):
 class PostCreate(LoginRequiredMixin,ObjectCreateMixin,View):
     model_form = PostForm
     template = 'blog/post_create.html'
+
+
+
 
     # def get(self,request):
     #     form = PostForm()
@@ -43,7 +52,6 @@ class PostCreate(LoginRequiredMixin,ObjectCreateMixin,View):
 class PostDetail(ObjectDetailMixin,View):
     model = Post
     template = 'blog/post_detail.html'
-
 
     # def get(self,request,slug):
     #         post = get_object_or_404(Post,slug__iexact=slug)
@@ -101,8 +109,6 @@ class TagUpdate(LoginRequiredMixin,ObjectUpdateMixin,View):
     model_form = TagForm
     template = 'blog/tag_update_form.html'
     raise_exception = True
-
-
 
     # def get(self,request,slug):
     #     tag = Tag.objects.get(slug__iexact=slug)

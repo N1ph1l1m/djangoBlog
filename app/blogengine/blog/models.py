@@ -55,15 +55,18 @@ class Post(models.Model):
      def __str__(self):
           return self.title
 
+     class Meta:
+          ordering = ['-date_pub']
+
 class Tag(models.Model):
      title = models.CharField(max_length=50)
      slug = models.SlugField(max_length=50, blank=True ,  unique = True)
 
 
      def save(self, *args, **kwargs):
-               if not self.id:
-                    self.slug = gen_slug(self.title)
-               super().save(*args, **kwargs)
+          if not self.id:
+               self.slug = gen_slug(self.title)
+          super().save(*args, **kwargs)
 
      def get_absolute_url(self):
           return reverse('tag_detail_url', kwargs = {'slug':self.slug})
@@ -76,3 +79,6 @@ class Tag(models.Model):
 
      def __str__(self):
           return  self.title
+
+     class Meta:
+          ordering = ['title']
