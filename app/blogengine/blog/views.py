@@ -9,17 +9,24 @@ from .forms import TagForm
 from .forms import PostForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
+from django.db.models import Q
 
 def posts_list(request):
-    posts_page = 10
-    posts = Post.objects.all()
+    search_query = request.GET.get('search',' ')
 
+    if search_query:
+        posts = Post.objects.filter(Q(title__icontains = search_query) | Q(bodu__icontains = search_query))
+    else:
+        posts = Post.objects.all()
+
+    posts_page = 10
     paginator = Paginator(posts,posts_page)
 
     page_number = request.GET.get('page',1)
     page = paginator.get_page(page_number)
 
     ispaginated = page.has_other_pages()
+
 
     if page.has_previous():
         prev_url = '?=page{}'.format(page.previous_page_number())
