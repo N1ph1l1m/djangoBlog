@@ -3,7 +3,14 @@ from .models import Women
 
 
 
+
 class WomenSerializer(serializers.ModelSerializer):
     class Meta:
         model= Women
         fields = ('title' , 'cat_id')
+
+
+
+# class WomenAPIView(APIView):
+#     def get(self,request):
+#         return Response({'title':'Angelina Jolie'})
