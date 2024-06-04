@@ -11,13 +11,34 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 
 def posts_list(request):
+    posts_page = 10
     posts = Post.objects.all()
 
-    paginator = Paginator(posts,2)
+    paginator = Paginator(posts,posts_page)
+
     page_number = request.GET.get('page',1)
     page = paginator.get_page(page_number)
 
-    return render(request, 'blog/index.html',context ={'page_object' : page})
+    ispaginated = page.has_other_pages()
+
+    if page.has_previous():
+        prev_url = '?=page{}'.format(page.previous_page_number())
+    else:
+        prev_url = ''
+
+    if page.has_next():
+        next_url = '?page={}'.format(page.next_page_number())
+    else:
+        next_url = ''
+
+    context ={
+        'page_object':page,
+        'ispaginated': ispaginated,
+        'next_url':next_url,
+        'prev_url': prev_url
+    }
+
+    return render(request, 'blog/index.html' ,context = context)
 
 
 
