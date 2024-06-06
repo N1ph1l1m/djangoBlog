@@ -22,6 +22,13 @@ def test(request):
 #     serializer_class = WomenSerializer
 
 
+
+
+class WomenApiList (generics.ListAPIView):
+    queryset = Women.objects.all()
+    serializer_class = WomenSerializer
+
+
 class WomenAPIView(APIView):
     def get(self, request):
         w = Women.objects.all()
