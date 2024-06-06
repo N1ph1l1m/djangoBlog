@@ -60,9 +60,7 @@ from .models import Women
 #         return instance
 
 
-
 class WomenSerializer(serializers.ModelSerializer):
     class Meta:
         model = Women
         fields = ("title", "content", "cat")
-
