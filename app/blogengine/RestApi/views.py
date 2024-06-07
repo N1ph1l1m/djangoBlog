@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics,viewsets
 from django.http import HttpResponse
 from .serializers import WomenSerializer
 from rest_framework.views import APIView
@@ -21,20 +21,24 @@ def test(request):
 #     queryset = Women.objects.all()
 #     serializer_class = WomenSerializer
 
-
-class WomenApiList(generics.ListAPIView):
+class WomenViewSet(viewsets.ModelViewSet):
     queryset = Women.objects.all()
     serializer_class = WomenSerializer
 
 
-class WomenApiUpdate(generics.UpdateAPIView):
-    queryset = Women.objects.all()
-    serializer_class = WomenSerializer
-
-
-class WomenApiDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Women.objects.all()
-    serializer_class = WomenSerializer
+# class WomenApiList(generics.ListAPIView):
+#     queryset = Women.objects.all()
+#     serializer_class = WomenSerializer
+#
+#
+# class WomenApiUpdate(generics.UpdateAPIView):
+#     queryset = Women.objects.all()
+#     serializer_class = WomenSerializer
+#
+#
+# class WomenApiDetailView(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Women.objects.all()
+#     serializer_class = WomenSerializer
 
 # class WomenAPIView(APIView):
 #     def get(self, request):
