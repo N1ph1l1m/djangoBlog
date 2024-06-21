@@ -23,6 +23,6 @@ urlpatterns = [
     path('', redirect_blog),
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
-    path('rest/',include('RestApi.urls')),
-
+    path('rest/', include('RestApi.urls')),
+    path('qrf/', include('quick_start.urls')),
 ]
