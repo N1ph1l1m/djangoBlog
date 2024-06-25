@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="45de7e6d-ba88-40be-b7fa-63ee67f7248d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/quick_start/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/quick_start/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/quick_start/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/quick_start/views.py" afterDir="false" />
     </list>
