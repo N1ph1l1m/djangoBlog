@@ -2,11 +2,18 @@ from rest_framework import serializers
 from django.contrib.auth.models import User,Group
 from .models import Snippet, LANGUAGE_CHOICE, STYLE_CHOICES
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+# class UserSerializer(serializers.HyperlinkedModelSerializer):
+#     class Meta:
+#         model = User
+#         field = ['url' , 'username', 'email' , 'groups']
+
+
+class UserSerializer(serializers.ModelSerializer):
+    snippets = serializers.PrimaryKeyRelatedField(many=True, queryset=Snippet.objects.all())
+
     class Meta:
         model = User
-        field = ['url' , 'username', 'email' , 'groups']
-
+        fields = ['id', 'username', 'snippets']
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -38,4 +45,5 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class SnippetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Snippet
-        fields = ['id', 'title', 'code', 'linenos', 'language', 'style']
+        fields = ['id', 'title', 'code', 'linenos', 'language', 'style', 'owner']
+        owner = serializers.ReadOnlyField(source='owner.username')

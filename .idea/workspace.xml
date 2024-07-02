@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="45de7e6d-ba88-40be-b7fa-63ee67f7248d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/quick_start/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/quick_start/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/quick_start/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/quick_start/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/quick_start/views.py" afterDir="false" />
     </list>
@@ -34,6 +39,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="djangoBlog" />
@@ -92,7 +102,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/blogengine/quick_start/views.py</url>
-          <line>113</line>
+          <line>43</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
