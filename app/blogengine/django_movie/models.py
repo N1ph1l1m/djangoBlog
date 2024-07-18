@@ -21,7 +21,7 @@ class Actor(models.Model):
     name = models.CharField("Имя", max_length=100)
     age = models.PositiveSmallIntegerField("Возраст", default=0)
     description = models.TextField("Описание")
-    image = models.ImageField("Изображение", upload_to="actors/")
+    image = models.ImageField("Изображение", upload_to='media/actors/')
 
     def __str__(self):
         return self.name
@@ -48,7 +48,7 @@ class Movie(models.Model):
     title = models.CharField("Название", max_length=100)
     tagline = models.CharField("Слоган", max_length=100)
     description = models.TextField("Описание")
-    poster = models.ImageField("Постер", upload_to="movie/")
+    poster = models.ImageField("Постер", upload_to="media/movie/")
     year = models.PositiveSmallIntegerField("Дата выхода", default=2000)
     country = models.CharField("Страна", max_length=30)
     directors = models.ManyToManyField(Actor, verbose_name="режисер", related_name="film_director")
@@ -98,7 +98,7 @@ class RatingStar(models.Model):
 class Rating(models.Model):
     ip = models.CharField("IP адрес", max_length=15)
     star = models.ForeignKey(RatingStar, on_delete=models.CASCADE, verbose_name="звезда")
-    movie = models.ForeignKey(Movie, on_delete=models.CharField, verbose_name="фильм")
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, verbose_name="фильм")
 
     def __str__(self):
         return f"{self.star} - {self.movie}"
@@ -108,7 +108,7 @@ class Rating(models.Model):
         verbose_name_plural = "Рейтинги"
 
 
-class Reies(models.Model):
+class Reviews(models.Model):
     email = models.EmailField()
     name = models.CharField("Имя", max_length=100)
     text = models.TextField("Сообщение", max_length=5000)
