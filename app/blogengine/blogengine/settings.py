@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'RestApi',
     'rest_framework',
     'quick_start',
+    'django_movie',
+
 ]
 
 MIDDLEWARE = [
@@ -124,6 +126,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = [
+    os.path.join(BASE_DIR, 'media')
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -139,3 +146,4 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE':10,
 }
+
