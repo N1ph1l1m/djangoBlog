@@ -10,5 +10,5 @@ def test(request):
 class MovieView(View):
     def get(self,request):
         movies = Movie.objects.all()
-        return render(request,"movies/movie_list.html",{"movie_list":movies})
+        return render(request,"movies/movie_list.html",{"movie_list": movies})
 
