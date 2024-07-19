@@ -12,3 +12,4 @@ class MovieView(View):
         movies = Movie.objects.all()
         return render(request,"movies/movie_list.html",{"movie_list": movies})
 
+
