@@ -5,13 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45de7e6d-ba88-40be-b7fa-63ee67f7248d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/css/style_movie.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/about.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/admin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/d1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/images.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/img7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/s9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/te1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/te2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/te3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/team.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/team1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/images/team2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/single-post-pic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/static/single-post-pic2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/blogengine/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/blogengine/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/static/css/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +63,20 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "F:/0.All projects/djangoBlog",
+    "last_opened_file_path": "F:/0.All projects/djangoBlog/app/blogengine/templates",
     "settings.editor.selected.configurable": "preferences.general"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\templates" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\static\css" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\templates" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\static" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\blogengine" />
