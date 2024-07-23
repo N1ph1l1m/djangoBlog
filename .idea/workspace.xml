@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45de7e6d-ba88-40be-b7fa-63ee67f7248d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/base_movie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/tt.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/templates/movies.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/templates/movies.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/templates/movies.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +52,11 @@
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\include" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\templates" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\static" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\blogengine" />
     </key>
   </component>
   <component name="RunManager">
