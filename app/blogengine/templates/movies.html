@@ -86,11 +86,12 @@
                         <div class="left-side my-4">
                             <h3 class="sear-head editContent">Жанры</h3>
                             <ul class="w3layouts-box-list">
-
+                                {% for genre in movie %}
                                 <li class="editContent">
                                     <input type="checkbox" class="checked">
-                                    <span class="span editContent">Аниме</span>
-
+                                    <span class="span editContent"> {{genre.name}}</span>
+                                </li>
+                                {%endfor%}
                             </ul>
                         </div>
                         <div class="left-side">
@@ -247,7 +248,9 @@
                                     </div>
                                     <div class="item-info-product">
                                         <h4 class="">
-                                            <a href="moviesingle.html" class="editContent" >{{movie.title}}</a>
+                                            <a href="{{ movie.get_absolute_url }}" class="editContent" >
+                                                {{movie.title}}
+                                            </a>
                                         </h4>
 
                                         <div class="product_price">
