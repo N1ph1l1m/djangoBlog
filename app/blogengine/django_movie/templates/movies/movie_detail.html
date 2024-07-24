@@ -3,8 +3,8 @@
 {% block movie  %}
     <div class="left-ads-display col-lg-8">
                     <div class="row">
-                        <div class="desc1-left col-md-6">
-                            <img src="{{ movie.poster.url }}" class="img-fluid" alt="">
+                        <div class="imgphone col-md-3">
+                            <img src="{{ movie.poster.url }}" class="img-fluid-detail" alt="">
                         </div>
                         <div class="desc1-right col-md-6 pl-lg-4">
                             <h3 class="editContent" style="outline: none; cursor: inherit;">
@@ -45,7 +45,7 @@
                                     <span><b>Бюджет:</b> ${{ movie.budget }}</span></li>
                                 <li style="list-style: none">
                                     <span><b>Сборы в США:</b> ${{ movie.fees_in_usa }}</span></li>
-                                <li style="list-style: none"><span><b>Сборы в мире:</b> ${{ movie.fess_in_world }}</span>
+                                <li style="list-style: none"><span><b>Сборы в мире:</b> ${{ movie.fees_in_world }}</span>
                                 </li>
                                 <li style="list-style: none">
                                     <a href="#"><b>Рейтинг:</b>
@@ -94,11 +94,12 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-                        </ul>
+                                          </ul>
                         </div>
 
                     </div>
-                    <div class="row sub-para-w3layouts mt-5">
+                    <hr>
+                   <div class="row sub-para-w3layouts mt-3">
 
                         <h3 class="shop-sing editContent" style="outline: none; cursor: inherit;">
                             О фильме {{ movie.title }}
@@ -111,18 +112,10 @@
                         <p class="editContent" style="outline: none; cursor: inherit;">
                             {{ movie.description }}
                         </p>
-                        <p class="mt-3 italic-blue editContent"
-                           style="outline: none; cursor: inherit;">
-                            <iframe width="560" height="315"
-                                    src="https://www.youtube.com/embed/A36LahZNUiE?controls=0"
-                                    frameborder="0" allow="accelerometer; autoplay;
-                                                                           encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen>
-
-                            </iframe>
-                        </p>
+                            <iframe class="url-videolock"
+                                width=""
+                                    src="{{movie.video_url}}"</iframe>
                     </div>
-                    <hr>
                     <div class="row">
                         <div class="single-form-left">
                             <!-- contact form grid -->
