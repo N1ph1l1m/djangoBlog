@@ -1245,6 +1245,44 @@ width:790px;
 height:450px;
 }
 
+.block_movieShorts{
+margin:0px auto;
+border:0px solid red;
+display:flex;
+flex-wrap:wrap;
+width:750px;
+height:300px;
+justify-content:space-around;
+align-items:center;
+}
+.reviews-body{
+display:flex;
+padding:5px;
+
+width:670px;
+height:auto;
+margin-bottom:5px;
+border-radius:3px;
+
+}
+
+.review-logoUser{
+width:32px;
+height:32px;
+margin:10px;
+}
+
+.review-text{
+text-align: justify;
+margin-right:10px;
+}
+.img-movie-shorts{
+weight:192px;
+height:128px;
+margin-right:10px;
+margin-bottom:10px;
+}
+
 /*-- //to-top --*/
 
 @media(max-width:1366px) {
