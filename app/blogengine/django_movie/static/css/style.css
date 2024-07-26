@@ -1247,7 +1247,6 @@ height:450px;
 
 .block_movieShorts{
 margin:0px auto;
-border:0px solid red;
 display:flex;
 flex-wrap:wrap;
 width:750px;
@@ -1255,15 +1254,29 @@ height:300px;
 justify-content:space-around;
 align-items:center;
 }
+
 .reviews-body{
 display:flex;
+flex-direction: column;
+width:670px;
+}
+.reviews-items{
+border-radius:3px;
+}
+
+.reviews-items-comment{
+margin-left:30px;
+}
+
+.reviews-header{
+display:flex;
+align-items:center;
 padding:5px;
 
-width:670px;
-height:auto;
-margin-bottom:5px;
-border-radius:3px;
-
+}
+.reviews-content{
+padding:5px;
+margin-bottom:10px;
 }
 
 .review-logoUser{
@@ -1281,6 +1294,11 @@ weight:192px;
 height:128px;
 margin-right:10px;
 margin-bottom:10px;
+}
+
+.editContent{
+text-align:justify;
+
 }
 
 /*-- //to-top --*/
