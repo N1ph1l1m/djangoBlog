@@ -76,6 +76,18 @@ ol {
 
 /* CSS Document */
 
+
+.header-wrap{
+width:30%;
+border:1px solid blue;
+}
+
+.header-movie{
+display:flex;
+flex-direction:column nowrap;
+justify-content: space-around;
+}
+
 header {
     position: absolute;
     z-index: 9;
@@ -86,6 +98,13 @@ header {
 .toggle,
 [id^=drop] {
     display: none;
+}
+
+.sidebar-wrap{
+
+margin-left:50px;
+width:20%;
+border:1px solid green;
 }
 
 /* Giving a background-color to the nav container. */
@@ -1239,6 +1258,13 @@ a.move-top span {
     background: #4a4b4c;
 }
 
+
+.wrapAboutMovie{
+display:flex;
+justify-content:center;
+flex-direction:column;
+
+}
 .url-videolock{
 margin:0px auto;
 width:790px;
@@ -1261,18 +1287,27 @@ flex-direction: column;
 width:670px;
 }
 .reviews-items{
+margin-top:10px;
 border-radius:3px;
+border:1px solid gray;
+
 }
 
 .reviews-items-comment{
 margin-left:30px;
+
 }
 
 .reviews-header{
 display:flex;
 align-items:center;
 padding:5px;
+border-bottom:1px solid gray;
 
+}
+
+.comment{
+border:0px;
 }
 .reviews-content{
 padding:5px;
@@ -1298,9 +1333,35 @@ margin-bottom:10px;
 
 .editContent{
 text-align:justify;
-
 }
 
+
+.media-body{
+display:flex;
+justify-content:center;
+flex-direction:column;
+}
+
+.contact-single{
+display:none;
+width:500px;
+}
+
+.toggleButton{
+margin-top:5px;
+width:180px;
+height:40px;
+border:1px solid blue;
+background-color:transparent;
+border-radius:13px;
+}
+.toggleButton:hover {
+cursor:pointer;
+}
+
+.toggleButton:active{
+border-color:blue;
+}
 /*-- //to-top --*/
 
 @media(max-width:1366px) {
@@ -1433,6 +1494,7 @@ text-align:justify;
 
     .main-banner {
         min-height: 38em;
+
     }
 
     .feature-grids h3,

@@ -2,12 +2,12 @@
 {% load static %}
 {% block title %} {{movie.title}}{% endblock title %}
 {% block movie  %}
-    <div class="left-ads-display col-lg-8">
-                    <div class="row">
-                        <div class="imgphone col-md-3">
+    <div class="header-wrap">
+                    <div class="header-movie">
+                        <div class="imgphone">
                             <img src="{{ movie.poster.url }}" class="img-fluid-detail" alt="">
                         </div>
-                        <div class="desc1-right col-md-6 pl-lg-4">
+                        <div class="">
                             <h3 class="editContent" style="outline: none; cursor: inherit;">
                                 {{ movie.title }}
                             </h3>
@@ -97,14 +97,12 @@
                                 </div>
                                           </ul>
                         </div>
-
                     </div>
                     <hr>
-                   <div class="colum">
-                        <h3 class="shop-sing editContent" style="outline: none; cursor: inherit;">
+                   <div class="wrapAboutMovie">
+                        <h3 class="shop-sing editContent">
                             О фильме {{ movie.title }}
                         </h3>
-
                        <div class="block_movieShorts">
                             {% for image in movie.movieshots_set.all %}
                                 <img src="{{ image.image.url }}" class="img-movie-shorts" alt="{{ image.image.description }}">
@@ -113,16 +111,14 @@
                         <p class="editContent">
                             {{ movie.description }}
                         </p>
-                            <iframe class="url-videolock"
-                                width=""
-                                    src="{{movie.video_url}}"></iframe>
+                       <iframe class="url-videolock" src="{{movie.video_url}}"></iframe>
                     </div>
             <div class="media-body">
-                                    <div class="contact-single">
+       <button class="toggleButton" id="toggleButton">Написать рецензию </button>
+                                    <div class="contact-single" id=review>
                                         <h3 class="editContent">
                                             <span class="sub-tittle editContent"
-                                                  style="outline: none; cursor: inherit;">{{ movie.reviews_set.count }}</span>Оставить
-                                            отзыв</h3>
+                                                  style="outline: none; cursor: inherit;">{{ movie.reviews_set.count }}</span>Рецензии зрителей</h3>
                                         <form action="{% url 'add_review' movie.id %}" method="post" class="mt-4">
                                             {% csrf_token %}
                                             <input type ="hidden" name="parent" id="contactparent" value="">
@@ -168,8 +164,8 @@
                                     </div>
                                 </div>
                         <div class="reviews-body">
+                             {% for review in movie.get_review %}
                             <div class="reviews-items">
-                                    {% for review in movie.get_review %}
                                 <div class="reviews-header">
                                           <img src="{% static 'user.png' %}" class="review-logoUser" alt="image">
                                           <h5 class="">
@@ -186,7 +182,7 @@
                                   {% for rev in review.reviews_set.all %}
                                 <div class="reviews-items-comment">
 
-                                <div class="reviews-header">
+                                <div class="reviews-header comment">
                                           <img src="{% static 'user.png' %}" class="review-logoUser" alt="image">
                                           <h5 class="">
                                             {{ rev.name }}
@@ -197,7 +193,7 @@
                                         {{ rev.text }}
                                     </p>
 
-                                    <a href="#formReview" onclick="addReview('{{review.name}} ', '{{review.id}}')" class="review-text">Ответить</a>
+                                    <a href="#formReview" onclick="addReview('{{review.name}} ', '{{review.id}}')" class="review-text" id="answer">Ответить</a>
                                 </div>
                             </div>
                                 {%endfor%}
@@ -208,6 +204,24 @@
                         </div>
                     </div>
     <script>
+   document.addEventListener('DOMContentLoaded', function() {
+            let toggleSwitch = false;
+            let toggleButton = document.getElementById("toggleButton");
+
+
+            toggleButton.addEventListener("click", function() {
+                toggleSwitch = !toggleSwitch;
+                console.log(toggleSwitch);
+                let wrapRev = document.getElementById("review");
+                if (toggleSwitch) {
+                    wrapRev.style.display  = "block";
+                }
+                else{
+                wrapRev.style.display  = "none";
+                }
+            });
+        });
+
         function addReview(name,id) {
             document.getElementById("contactparent").value = id;
             document.getElementById("contactcomment").innerText = `${name},`

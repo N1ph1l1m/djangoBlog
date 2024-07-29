@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45de7e6d-ba88-40be-b7fa-63ee67f7248d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_detail_comment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/static/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/static/css/bootstrap.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,16 +37,16 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "F:/0.All projects/Voise/SoundScript",
+    "last_opened_file_path": "F:/0.All projects/djangoBlog/app/blogengine/django_movie/templates/movies",
     "settings.editor.selected.configurable": "preferences.general"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\static" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\blog\static\css" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\templates" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
