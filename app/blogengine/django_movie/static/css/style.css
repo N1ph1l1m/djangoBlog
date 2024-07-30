@@ -78,15 +78,19 @@ ol {
 
 
 .header-wrap{
-width:30%;
+max-width:78%;
 border:1px solid blue;
 }
 
 .header-movie{
 display:flex;
 flex-direction:column nowrap;
-justify-content: space-around;
+justify-content: start;
+padding-left:30px;
 }
+.wall{
+width:40px;}
+
 
 header {
     position: absolute;
@@ -101,10 +105,8 @@ header {
 }
 
 .sidebar-wrap{
-
-margin-left:50px;
 width:20%;
-border:1px solid green;
+border:3px solid green;
 }
 
 /* Giving a background-color to the nav container. */
@@ -1260,8 +1262,9 @@ a.move-top span {
 
 
 .wrapAboutMovie{
+border:3px solid yellow;
 display:flex;
-justify-content:center;
+align-items:center;
 flex-direction:column;
 
 }
@@ -1275,10 +1278,11 @@ height:450px;
 margin:0px auto;
 display:flex;
 flex-wrap:wrap;
-width:750px;
-height:300px;
+max-width:750px;
+max-height:300px;
 justify-content:space-around;
 align-items:center;
+border:1px solid red;
 }
 
 .reviews-body{
@@ -1342,6 +1346,10 @@ justify-content:center;
 flex-direction:column;
 }
 
+.movie-info{
+max-width:400px;
+height:auto;
+}
 .contact-single{
 display:none;
 width:500px;

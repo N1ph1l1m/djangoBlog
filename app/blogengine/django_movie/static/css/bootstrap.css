@@ -598,6 +598,7 @@ border:1px solid red;
 border:1px solid red;
 width: 100%;
 display:flex;
+padding-left:20px;
 flex-direction:column nowrap;
 justify-content: space-between;
 
