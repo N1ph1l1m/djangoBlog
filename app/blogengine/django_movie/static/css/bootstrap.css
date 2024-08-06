@@ -595,7 +595,7 @@ border:1px solid red;
 }*/
 
 .container-fluid{
-border:1px solid red;
+padding-bottom:10px;
 width: 100%;
 display:flex;
 padding-left:20px;
