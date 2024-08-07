@@ -1,7 +1,19 @@
+from django import forms
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 
 from .models import Category, Genre,Movie, MovieShots,Actor,Rating,RatingStar,Reviews
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+
+
+class MovieAdminForm(forms.ModelForm):
+    description = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
+    class Meta:
+        model = Movie
+        fields = '__all__'
+
+
+
 
 
 class ReviewInLine(admin.TabularInline):
@@ -37,12 +49,16 @@ class MovieAdmin(admin.ModelAdmin):
     inlines = [MovieShortsInlite,ReviewInLine]
     save_on_top = True
     save_as = True
+    form = MovieAdminForm
     list_editable = ("draft",)
     readonly_fields = ("get_image",)
      ## отображение полей в режиме редактирования
     fieldsets = (
         (None,{
         "fields": (("title", "tagline"),)
+        }),
+        (None, {
+            "fields": (("description"),)
         }),
         (None, {
             "fields": (("poster"),)
@@ -78,6 +94,7 @@ class MovieAdmin(admin.ModelAdmin):
 
 
 
+
 @admin.register(Reviews)
 class ReviewsAdmin(admin.ModelAdmin):
     list_display = ("email", "name", "movie","parent", "text",)
@@ -103,7 +120,7 @@ class MovieShortsAdmin(admin.ModelAdmin):
 class ActorAdmin(admin.ModelAdmin):
     list_display = ("name","age","description","get_image",)
     list_display_links = ("name",)
-    search_fields = ("description",)
+    search_fields = ("name",)
     readonly_fields = ("get_image",)
 
     def get_image(self,obj):
@@ -130,6 +147,7 @@ class RatingStarAdmin(admin.ModelAdmin):
 
 admin.site.site_title = "Movies"
 admin.site.site_header = "Movies"
+
 
 
 

@@ -24,6 +24,7 @@ from .views import redirect_blog
 urlpatterns = [
     path('', redirect_blog),
     path('admin/', admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('blog/', include('blog.urls')),
     path('rest/', include('RestApi.urls')),
     path('qrf/', include('quick_start.urls')),

@@ -110,7 +110,7 @@
                             {% endfor %}
                        </div>
                         <p class="editContent">
-                            {{ movie.description }}
+                            {{ movie.description|safe }}
                         </p>
                        <div class="wrap-video">
                             <iframe class="url-videolock" src="{{movie.video_url}}"></iframe>
