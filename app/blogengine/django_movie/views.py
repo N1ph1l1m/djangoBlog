@@ -10,16 +10,21 @@ def test(request):
     return HttpResponse("Test django_movie")
 
 
+
 class MovieView(ListView):
 
     model = Movie
     queryset = Movie.objects.filter(draft = False)
     template_name = "movies/movie_list.html"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['genres'] = Genre.objects.all()
-        return context
+
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['categories'] = Category.objects.all()
+    #     return context
+
+
 
 
 class MovieDetailView(DetailView):
@@ -31,6 +36,7 @@ class MovieDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['genres'] = Genre.objects.all()
         return context
+
 
 class AddReview(View):
 
