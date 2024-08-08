@@ -477,9 +477,10 @@ mark,
   height:200px;
 }
 
-img-fluid-detail{
-  width: 222px;
+.img-fluid-detail{
+  width: 300px;
   height:100%;
+  margin-right:25px;
 }
 
 .img-thumbnail {
@@ -601,7 +602,6 @@ display:flex;
 padding-left:20px;
 flex-direction:column nowrap;
 justify-content: space-between;
-
 }
 
 .row {

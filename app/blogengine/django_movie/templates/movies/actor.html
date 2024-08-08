@@ -1,0 +1,40 @@
+{% extends  'movies/base.html' %}
+{% load static %}
+{% block title %} {{actor.name}}{% endblock title %}
+{% block movie  %}
+    <div class="header-wrap-actor">
+                    <div class="header-detail-items">
+                        <div class="imgphone actor-img">
+                            <img src="{{ actor.image.url }}" class="img-fluid-detail" alt="">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="editContent" style="outline: none; cursor: inherit;">
+                                {{ actor.name }}
+                            </h3>
+                            <h5 class="editContent"></h5>
+                            <ul>
+                                <li style="list-style: none">
+                                    <span><b>Возраст:</b> {{ actor.age }}</span>
+                                </li>
+                                 <li style="list-style: none">
+                                    <span><b>Актер:</b>
+                                        {% for movie in actor.film_actor.all %}
+                                        {{ movie.title }}
+                                        {% endfor%}
+                                    </span>
+                                </li>
+                                      <li style="list-style: none">
+                                    <span><b>Режисер:</b>
+                                        {% for movie in actor.film_director.all %}
+                                        {{ movie.title }}
+                                        {% endfor%}
+                                    </span>
+                                </li>
+                                  <li style="list-style: none">
+                                    <span><b>Описание:</b> {{ actor.description }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    </div>
+   {% endblock movie  %}

@@ -77,16 +77,23 @@ ol {
 /* CSS Document */
 
 
-.header-wrap{
+.header-detail{
 max-width:78%;
 }
 
-.header-movie{
+
+
+.header-detail-items{
 width:100%;
 display:flex;
 flex-direction:column nowrap;
 justify-content: start;
 padding-left:30px;
+
+}
+.header-wrap-actor{
+border:1px solid blue;
+width:80%;
 }
 
 .wall{
@@ -855,6 +862,7 @@ li.breadcrumb-item a {
 }
 
 .img-deals img {
+    margin-left:10px;
     border: 1px solid #ddd;
 }
 

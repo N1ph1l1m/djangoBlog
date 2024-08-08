@@ -38,6 +38,11 @@ class MovieDetailView(DetailView):
         return context
 
 
+class ActorDetailView(DetailView):
+    model = Actor
+    slug_field = "name"
+    template_name = "movies/actor.html"
+
 class AddReview(View):
 
     def post(self,request,pk):
