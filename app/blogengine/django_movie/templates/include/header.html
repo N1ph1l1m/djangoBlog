@@ -1,3 +1,4 @@
+{% load movie_tag %}
 <div class="main-banner bg bg1" id="home">
             <header class="header">
                 <div class="">
@@ -16,10 +17,12 @@
                             <li class="active"><a href="{% url 'movie_list' %}">Главная</a></li>
                             <li>
                                 <!-- First Tier Drop Down -->
+
                                 <label for="drop-2" class="toggle">Категории <span class="fa fa-angle-down" aria-hidden="true" ></span> </label>
                                 <a href="#">Категории <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                                 <input type="checkbox" id="drop-2">
                                 <ul>
+                                    {% get_categories as categories %}
                                     {% for category in categories %}
                                     <li><a href="moviesingle.html">{{ category.name }}</a></li>
                                     {% endfor %}
