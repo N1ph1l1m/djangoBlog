@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+from django.db.models import Q
+from django.http import HttpResponse, JsonResponse
 from django.views.generic import ListView, DetailView
 from django.views.generic.base import View
 from django.shortcuts import render, redirect
@@ -31,10 +32,10 @@ class MovieDetailView(GenreYear, DetailView):
     slug_field = "url"
     template_name = "movies/movie_detail.html"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['genres'] = Genre.objects.all()
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['star_form'] = RatingForm()
+    #     return context
 
 
 class ActorDetailView(GenreYear, DetailView):
@@ -44,7 +45,6 @@ class ActorDetailView(GenreYear, DetailView):
 
 
 class AddReview(View):
-
     def post(self, request, pk):
         form = ReviewsForm(request.POST)
         movie = Movie.objects.get(id=pk)
@@ -74,3 +74,26 @@ class FilterMovieView(GenreYear, ListView):
             queryset = queryset.filter(genres__name__in=genres)
 
         return queryset
+
+class JsonFilterMoviesView(ListView):
+    """Фильтр фильмов в json"""
+
+    def get_queryset(self):
+        queryset = Movie.objects.all()  # Начинаем с полного списка фильмов
+
+        # Фильтрация по годам
+        years = self.request.GET.getlist("year")
+        if years:
+            queryset = queryset.filter(year__in=years).distinct().values("title", "tagline", "url", "poster")
+
+        # Фильтрация по жанрам
+        genres = self.request.GET.getlist("genre")
+        if genres:
+            queryset = queryset.filter(genres__name__in=genres).distinct().values("title", "tagline", "url", "poster")
+
+        return queryset
+
+
+    def get(self, request, *args, **kwargs):
+        queryset = list(self.get_queryset())
+        return JsonResponse({"movies": queryset}, safe=False)
