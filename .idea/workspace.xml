@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="45de7e6d-ba88-40be-b7fa-63ee67f7248d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/sidebar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" afterDir="false" />
@@ -45,11 +47,11 @@
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\blog\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\include" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\blogengine" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\static" />
     </key>
   </component>
   <component name="RunManager" selected="Python.manage">

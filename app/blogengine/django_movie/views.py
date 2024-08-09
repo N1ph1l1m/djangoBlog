@@ -58,6 +58,19 @@ class AddReview(View):
 
 
 class FilterMovieView(GenreYear, ListView):
+    template_name = "movies/movie_list.html"
+
     def get_queryset(self):
-        queryset = Movie.objects.filter(year__in=self.request.GET.getlist("year"))
+        queryset = Movie.objects.all()  # Начинаем с полного списка фильмов
+
+        # Фильтрация по годам
+        years = self.request.GET.getlist("year")
+        if years:
+            queryset = queryset.filter(year__in=years)
+
+        # Фильтрация по жанрам
+        genres = self.request.GET.getlist("genre")
+        if genres:
+            queryset = queryset.filter(genres__name__in=genres)
+
         return queryset
