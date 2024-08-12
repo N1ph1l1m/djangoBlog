@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.generic import ListView, DetailView
 from django.views.generic.base import View
 from django.shortcuts import render, redirect
+from numba.cuda import args
 
 from .forms import ReviewsForm , RatingForm
 from .models import *
@@ -25,6 +26,7 @@ class MovieView(GenreYear, ListView):
     model = Movie
     queryset = Movie.objects.filter(draft=False)
     template_name = "movies/movie_list.html"
+    paginate_by = 4
 
 
 class MovieDetailView(GenreYear, DetailView):
@@ -59,6 +61,7 @@ class AddReview(View):
 
 class FilterMovieView(GenreYear, ListView):
     template_name = "movies/movie_list.html"
+    paginate_by = 4
 
     def get_queryset(self):
         queryset = Movie.objects.all()  # Начинаем с полного списка фильмов
@@ -74,6 +77,12 @@ class FilterMovieView(GenreYear, ListView):
             queryset = queryset.filter(genres__name__in=genres)
 
         return queryset
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context["year"] = ''.join([f"year={x}&" for x in self.request.GET.getlist("year")])
+        context["genre"] = ''.join([f"genre={x}&" for x in self.request.GET.getlist("genre")])
+        return context
 
 class JsonFilterMoviesView(ListView):
     """Фильтр фильмов в json"""
@@ -94,9 +103,14 @@ class JsonFilterMoviesView(ListView):
         return queryset
 
 
+
+
     def get(self, request, *args, **kwargs):
         queryset = list(self.get_queryset())
         return JsonResponse({"movies": queryset}, safe=False)
+
+
+
 
 
 class AddStarRating(View):
