@@ -167,7 +167,7 @@ class GenreAdmin(admin.ModelAdmin):
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ("ip", "star", "movie",)
+    list_display = ("ip", "movie", "star", )
     list_display_links = ("ip",)
 
 
@@ -179,5 +179,6 @@ class RatingStarAdmin(admin.ModelAdmin):
 
 admin.site.site_title = "Movies"
 admin.site.site_header = "Movies"
+
 
 

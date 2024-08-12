@@ -23,7 +23,6 @@ forms.addEventListener('submit', function (e) {
 });
 
 function render(data) {
-    console.log("click")
     // Рендер шаблона
     let template = Hogan.compile(html);
     let output = template.render(data);
@@ -59,3 +58,50 @@ let html =`
         </div>\
     </div>\
 {{/movies}}`
+
+
+// Add star rating
+const rating = document.querySelector('form[name=rating]');
+
+rating.addEventListener("change", function (e) {
+    // Получаем данные из формы
+    let data = new FormData(this);
+    fetch(`${this.action}`, {
+        method: 'POST',
+        body: data
+    })
+        .then(response => alert("Рейтинг установлен"))
+        .catch(error => alert("Ошибка"))
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
