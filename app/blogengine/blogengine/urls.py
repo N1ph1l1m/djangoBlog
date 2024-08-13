@@ -29,6 +29,7 @@ urlpatterns = [
     path('rest/', include('RestApi.urls')),
     path('qrf/', include('quick_start.urls')),
     path('movie/', include('django_movie.urls')),
+    path('pages/', include('django.contrib.flatpages.urls')),
 ]
 
 
