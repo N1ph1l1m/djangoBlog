@@ -30,6 +30,7 @@ urlpatterns = [
     path('qrf/', include('quick_start.urls')),
     path('movie/', include('django_movie.urls')),
     path('pages/', include('django.contrib.flatpages.urls')),
+    path('contacts/',include('contact.urls')),
 ]
 
 

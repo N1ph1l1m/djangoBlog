@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'quick_start',
     'django_movie',
+    'contact',
 
 ]
 
