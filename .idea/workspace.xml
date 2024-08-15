@@ -6,11 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="45de7e6d-ba88-40be-b7fa-63ee67f7248d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/blogengine/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/blogengine/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/blogengine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/blogengine/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/include/sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogengine/django_movie/templates/movies/movie_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,30 +30,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "Python.manage.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "F:/0.All projects/djangoBlog/app/blogengine/django_movie",
-    "settings.editor.selected.configurable": "preferences.general"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/0.All projects/Voise/SoundScript&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\contact\templates" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\include" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\static" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\blog\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
       <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\include" />
-      <recent name="F:\0.All projects\djangoBlog\app\blogengine\blogengine" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\contact\templates" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\static" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\static\static" />
+      <recent name="F:\0.All projects\djangoBlog\app\blogengine\django_movie\templates\movies" />
     </key>
   </component>
   <component name="RunManager" selected="Python.manage">

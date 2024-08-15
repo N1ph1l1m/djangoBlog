@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
@@ -31,7 +32,15 @@ urlpatterns = [
     path('movie/', include('django_movie.urls')),
     path('pages/', include('django.contrib.flatpages.urls')),
     path('contacts/',include('contact.urls')),
+    path('i18n/',include('django.conf.urls.i18n')),
 ]
+
+
+urlpatterns += i18n_patterns(
+    path('pages/',include('django.contrib.flatpages.urls')),
+    path('contact/',include('contact.urls')),
+    path("", include('django_movie.urls'))
+)
 
 
 if settings.DEBUG:

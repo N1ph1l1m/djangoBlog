@@ -4,10 +4,12 @@ from django.utils.safestring import mark_safe
 
 from .models import Category, Genre, Movie, MovieShots, Actor, Rating, RatingStar, Reviews
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
+from modeltranslation.admin import TranslationAdmin
 
 
 class MovieAdminForm(forms.ModelForm):
-    description = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
+    description_ru = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
+    description_en = forms.CharField(label="Labl", widget=CKEditorUploadingWidget())
 
     class Meta:
         model = Movie
@@ -32,9 +34,10 @@ class MovieShortsInlite(admin.TabularInline):
 
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(TranslationAdmin):
     list_display = ("id", "name", "url")
     list_display_links = ("name",)
+
 
 # @admin.action(description="Опубликовать")
 # def unpublish(self, request, queryset):
@@ -46,10 +49,8 @@ class CategoryAdmin(admin.ModelAdmin):
 #     self.message_user(request, f"{message_bit}")
 
 
-
-
 @admin.register(Movie)
-class MovieAdmin(admin.ModelAdmin):
+class MovieAdmin(TranslationAdmin):
     list_display = ("id", "title", "category", "url", "draft",)
     list_display_links = ("title",)
     list_filter = ("category", "year",)
@@ -57,7 +58,7 @@ class MovieAdmin(admin.ModelAdmin):
     inlines = [MovieShortsInlite, ReviewInLine]
     save_on_top = True
     save_as = True
-    actions = [ 'publish','unpublish']
+    actions = ['publish', 'unpublish']
     form = MovieAdminForm
     list_editable = ("draft",)
     readonly_fields = ("get_image",)
@@ -119,7 +120,6 @@ class MovieAdmin(admin.ModelAdmin):
             message_bit = f"обновлено записей  {row_update} "
         self.message_user(request, f"{message_bit}")
 
-
     publish.short_description = "Опубликовать"
     publish.allowed_permissions = ('change',)
 
@@ -135,7 +135,7 @@ class ReviewsAdmin(admin.ModelAdmin):
 
 
 @admin.register(MovieShots)
-class MovieShortsAdmin(admin.ModelAdmin):
+class MovieShortsAdmin(TranslationAdmin):
     list_display = ("title", "description", "get_image", "movie",)
     list_display_links = ("title",)
     readonly_fields = ("get_image",)
@@ -147,7 +147,7 @@ class MovieShortsAdmin(admin.ModelAdmin):
 
 
 @admin.register(Actor)
-class ActorAdmin(admin.ModelAdmin):
+class ActorAdmin(TranslationAdmin):
     list_display = ("name", "age", "description", "get_image",)
     list_display_links = ("name",)
     search_fields = ("name",)
@@ -160,14 +160,14 @@ class ActorAdmin(admin.ModelAdmin):
 
 
 @admin.register(Genre)
-class GenreAdmin(admin.ModelAdmin):
+class GenreAdmin(TranslationAdmin):
     list_display = ("name", "description", "url",)
     list_display_links = ("name",)
 
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ("ip", "movie", "star", )
+    list_display = ("ip", "movie", "star",)
     list_display_links = ("ip",)
 
 
@@ -179,6 +179,3 @@ class RatingStarAdmin(admin.ModelAdmin):
 
 admin.site.site_title = "Movies"
 admin.site.site_header = "Movies"
-
-
-
