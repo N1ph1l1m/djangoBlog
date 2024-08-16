@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'quick_start',
     'django_movie',
     'contact',
-
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "allauth.account.middleware.AccountMiddleware",
 
 ]
 
@@ -91,9 +93,19 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+AUTHENTICATION_BACKEND = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -125,6 +137,18 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Редирекст для авторизации
+LOGIN_REDIRECT_URL = 'main_film'
+LOGOUT_REDIRECT_URL = 'main_film'
+SIGNUP_REDIRECT_URL = 'main_film'
+SIGNOUT_REDIRECT_URL = 'main_film'
+
+
+#Настройка регистрации
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+
+EMAIL_BACKEND = 'django.core.mail.backend.dummy.EmailBackend'
 
 gettext = lambda s: s
 LANGUAGES = (

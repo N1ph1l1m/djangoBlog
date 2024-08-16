@@ -16,4 +16,5 @@ def test(request):
 class ContactView(CreateView):
     model = Contact
     form_class = ContactForm
-    success_ur = '/'
+    success_url = reverse_lazy('main_film')
+

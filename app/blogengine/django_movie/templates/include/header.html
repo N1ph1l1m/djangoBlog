@@ -5,6 +5,10 @@
                     <nav class="py-4">
                            <div id="logo">
                             <h1> <a style="" href="{% url 'main_film' %}" class="editContent">DjangoMovie</a></h1>
+                                {% if user.is_authenticated %}
+
+                                <span style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">{{user.username}}</span>
+                               {% endif %}
                         </div>
                         <label for="drop" class="toggle">Menu</label>
                         <input type="checkbox" id="drop">
@@ -23,7 +27,23 @@
                                     {% endfor %}
                                 </ul>
                             </li>
-                            <li><a href="contact.html" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Вход</a></li>
+                            <li>
+                                {% if user.is_authenticated %}
+                                <a href="{% url 'account_logout' %}" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                                    Выход
+                                </a>
+                                   {% else %}
+                                <a href="{% url 'account_login' %}" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                                    Вход
+                                </a>
+                                <a href="{% url 'account_signup' %}" style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">
+                                    Регистрация
+                                </a>
+
+                             {% endif %}
+                            </li>
+
+
 
                             <li>
                                 <form action="{% url 'set_language' %}" method="post">

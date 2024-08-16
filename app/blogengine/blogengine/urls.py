@@ -20,10 +20,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from django.urls import include
-from .views import redirect_blog
+from .views import test
 
 urlpatterns = [
-    path('', redirect_blog),
+    path('', test),
     path('admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('blog/', include('blog.urls')),
@@ -37,6 +37,7 @@ urlpatterns = [
 
 
 urlpatterns += i18n_patterns(
+    path('accounts/',include('allauth.urls')),
     path('pages/',include('django.contrib.flatpages.urls')),
     path('contact/',include('contact.urls')),
     path("", include('django_movie.urls'))
